@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block some %}
+{% for lot in articles%}
+    <div class="pad">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <div class="caption">
+                  <h3><a href="./lot/{{lot.id}}">{{lot.name}}</a></h3>
+                <p>{{lot.description}}</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}
